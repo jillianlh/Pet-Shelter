@@ -1,0 +1,29 @@
+<h3 class="text-center">Edit</h3>
+
+<form (submit)="updatePet(one_pet._id)" style="width: 550px; margin: auto;">
+   <div>
+      <label style="margin-bottom: 0px;">Name:</label>&nbsp;
+      <span *ngIf="error2s.name" style="font-weight: bold;">{{error2s.name.message}}</span>
+      <input type="text" name="one_pet.name" [(ngModel)]="one_pet.name" class="form-control" style="background-color: #eee; margin-bottom: 10px;">
+   </div>
+   <div>
+      <label style="margin-bottom: 0px;">Type:</label>&nbsp;
+      <span *ngIf="error2s.type" style="font-weight: bold;">{{error2s.type.message}}</span>
+      <input type="text" name="one_pet.type" [(ngModel)]="one_pet.type" class="form-control" style="background-color: #eee; margin-bottom: 10px;">
+   </div>
+   <div>
+      <label style="margin-bottom: 0px;">Description:</label>&nbsp;
+      <span *ngIf="error2s.description" style="font-weight: bold;">{{error2s.description.message}}</span>
+      <input type="text" name="one_pet.description" [(ngModel)]="one_pet.description" class="form-control" style="background-color: #eee; margin-bottom: 10px;">
+   </div>
+   <div>
+      <label style="margin-bottom: 0px;">Skills (Optional):</label><br>
+      <input type="text" name="one_pet.skill1" [(ngModel)]="one_pet.skill1" placeholder="Skill 1" class="form-control" style="background-color: #eee;">
+      <input type="text" name="one_pet.skill2" [(ngModel)]="one_pet.skill2" placeholder="Skill 2" class="form-control" style="background-color: #eee;">
+      <input type="text" name="one_pet.skill3" [(ngModel)]="one_pet.skill3" placeholder="Skill 3" class="form-control" style="background-color: #eee;">
+   </div>
+   <div class="text-center" style="margin-top: 15px;">
+      <a [routerLink]="['/']" class="btn btn-outline-dark">Cancel</a>
+      <input type="submit" value="Update Pet" class="btn btn-primary">
+   </div>
+</form>   

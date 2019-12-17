@@ -1,0 +1,13 @@
+<div style="width: 500px; border: 1px solid #999; padding: 25px; border-radius: 5px; background-color: #eee; margin: 25px auto;">
+   <h3 style="margin-bottom: 15px;">Details about {{pet.name}}</h3>
+   <p>Pet type: {{pet.type}}</p>
+   <p>Description: {{pet.description}}</p>
+   <p>Skill 1: {{pet.skill1}}</p>
+   <p>Skill 2: {{pet.skill2}}</p>
+   <p>Skill 3: {{pet.skill3}}</p>
+   <p>♥ {{pet.likes}}</p>
+   <div class="text-center">
+      <button [disabled]="isLiked" [routerLink]="['/pet', pet._id]" (click)="like(pet._id)" class="btn btn-outline-dark">Love ♥</button>
+      <a href="/" (click)="delete(pet._id)" class="btn btn-primary">Adopt This Pet</a>
+   </div>
+</div>
